@@ -1,6 +1,6 @@
 {
   "name": "@xbsheng/umi-plugin-env",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Umi插件，用于基于环境变量加载不同的.env文件",
   "main": "lib/index.js",
   "module": "lib/index.js",
