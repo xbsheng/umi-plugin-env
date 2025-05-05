@@ -1,0 +1,63 @@
+{
+  "name": "@xbsheng/umi-plugin-env",
+  "version": "1.0.0",
+  "description": "Umi插件，用于基于环境变量加载不同的.env文件",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "father build",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json}\"",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "release": "npm run build && npm test && npm publish --registry=https://registry.npmjs.org/",
+    "release:patch": "npm version patch && npm run release",
+    "release:minor": "npm version minor && npm run release",
+    "release:major": "npm version major && npm run release"
+  },
+  "keywords": [
+    "umi",
+    "umi-plugin",
+    "env",
+    "dotenv"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xbsheng/umi-plugin-env"
+  },
+  "bugs": {
+    "url": "https://github.com/xbsheng/umi-plugin-env/issues"
+  },
+  "homepage": "https://github.com/xbsheng/umi-plugin-env#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "@umijs/max": "^4.0.0",
+    "typescript": "^5.0.4",
+    "eslint": "^8.39.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "father": "^4.1.0",
+    "vitest": "^0.32.0",
+    "@vitest/coverage-v8": "^0.32.0",
+    "prettier": "^3.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@umijs/max": ">=4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
