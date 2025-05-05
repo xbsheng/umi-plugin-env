@@ -17,7 +17,8 @@ const PLUGIN_KEY = 'env'
  */
 const DEFAULT_ENV_KEY = 'UMI_ENV'
 
-export default (api: IApi) => {
+// 使用命名导出和默认导出，确保兼容性
+export function env(api: IApi) {
   api.describe({
     key: PLUGIN_KEY,
     config: {
@@ -64,3 +65,5 @@ export default (api: IApi) => {
     }
   })
 }
+
+export default env

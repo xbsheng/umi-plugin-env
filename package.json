@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Umi插件，用于基于环境变量加载不同的.env文件",
   "main": "lib/index.js",
+  "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib"
